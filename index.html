@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shourtcut icon" type="book" href="/images/Icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mohamed Ali</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Mohamed Ali</a>
+        <nav class="navigation">
+            <a href="#aboutme">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div>
+            <h2>Hello, I'm Mohamed ALi<br><span>Software Developer</span></h2>
+            <a href="Mohamed Ali Hassan.pdf" class="main-btn" target="_blank">View My Resume</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mohamed-ali-abdalaal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/MohamedAli10722" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="aboutme">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <ul>
+                <li>I'm a Computer Science graduate with a focus on back-end development.</li>
+                <li>Specializing in building scalable web APIs and enterprise-level applications.</li>
+                <li>Using technologies like <strong>ASP.NET Core</strong>, <strong>Entity Framework</strong> and <strong>SQL Server</strong>.</li>
+                <li>I have prior experience with <strong>React</strong> and front-end development.</li>
+                <li>My primary interest and strength now lie in back-end.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title">Projects</h2>
+        <div class="content">
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-image">
+                    <img src="images/Task Area.png" />
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Task Management System</p>
+                    <strong class="project-title">
+                        <a href="#" class="more-details" onclick="event.stopPropagation()">More details</a>
+                    </strong>
+                </div>
+                <div class="project-details">
+                    <h3>Task Management System</h3>
+                    <p>
+                        A web app that organizes, assigns, tracks, and evaluates team tasks to boost productivity.
+                        Built with <strong>ASP.NET Core API</strong>, <strong>Entity Framework</strong>, <strong>SQL Server</strong>,
+                        <strong>Firebase</strong>, and <strong>JWT Authentication</strong>.
+                        <p class="code"><a href="https://github.com/MohamedAli10722/Task-Management-System" target="_blank">Sorce Code</a></p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-image">
+                    <img src="images/Dot Net.png"/>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Property Management</p>
+                    <strong class="project-title">
+                        <a href="#" class="more-details" onclick="event.stopPropagation()">More details</a>
+                    </strong>
+                </div>
+                <div class="project-details">
+                    <h3>Property Management System</h3>
+                    <p>
+                        The purpose of the Project is to implement dynamic custom properties for employees
+                        Developed using <strong>ASP.NET Core</strong>, <strong>Entity Framework</strong>, and <strong>SQL Server</strong>.
+                        <p class="code"><a href="https://github.com/MohamedAli10722/Property-Management" target="_blank">Sorce Code</a></p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-image">
+                    <img src="images/Book Store.png"/>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Book Store</p>
+                    <strong class="project-title">
+                        <a href="#" class="more-details" onclick="event.stopPropagation()">More details</a>
+                    </strong>
+                </div>
+                <div class="project-details">
+                    <h3>Book Store Website</h3>
+                    <p>
+                        Front-end bookstore website developed using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+                        Includes interactive UI for browsing and searching books.
+                        <p class="code"><a href="https://github.com/MohamedAli10722/BookStore-Project" target="_blank">Sorce Code</a></p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-image">
+                    <img src="images/Icon.jpg"/>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Portfolio Website</p>
+                    <strong class="project-title">
+                        <a href="#" class="more-details" onclick="event.stopPropagation()">More details</a>
+                    </strong>
+                </div>
+                <div class="project-details">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Personal responsive portfolio website built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+                        Includes sections for projects, contact, and social links.
+                        <p class="code"><a href="https://github.com/MohamedAli10722/BookStore-Project" target="_blank">Sorce Code</a></p>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Let's work together</h2>
+        <div class="content">
+            <a href="tel:+201097110295" class="card">
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+201097110295</p>
+                </div>
+            </a>
+            <a href="mailto:Mohamed.ALi.10722@gmail.com" class="card">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>Mohamed.ALi.10722@gmail.com</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <span class="up"><i class="fas fa-arrow-up"></i></span>
+
+</body>
+    
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Mohamed Ali</span></p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/mohamed-ali-abdalaal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/MohamedAli10722" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+  <script src="/script.js"></script>
+
+  
+</html>
