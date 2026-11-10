@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    /* Same brand colors as before, now used as the whole site's system */
-    --accent: #3a6cf4;
-    --accent-2: #601cfc;
-    --bg: #05060f;
-    --bg-alt: #0a0c1c;
-    --surface: #10132a;
-    --surface-border: rgba(58, 108, 244, 0.18);
-    --text: #eef0fa;
-    --text-muted: #a6acc8;
+    /* Palette: Navy #1F2A44 / Warm Beige #E8DCC8 / Soft Gold #C6A75E */
+    --accent: #C6A75E;          /* Soft Gold */
+    --accent-2: #E3CD8E;        /* lighter gold, for gradients only */
+    --on-accent: #1F2A44;       /* navy text on gold surfaces */
+    --bg: #141B2E;              /* deeper navy */
+    --bg-alt: #1F2A44;          /* Navy */
+    --surface: #2A3857;         /* raised navy for cards */
+    --surface-border: rgba(198, 167, 94, 0.22);
+    --text: #E8DCC8;            /* Warm Beige */
+    --text-muted: #B3AC9E;
     --radius: 16px;
     --header-h: 70px; /* fallback; script.js sets the real measured value */
 }
@@ -35,7 +36,7 @@ a { color: inherit; }
 
 ::selection {
     background: var(--accent);
-    color: #fff;
+    color: var(--on-accent);
 }
 
 :focus-visible {
@@ -45,7 +46,7 @@ a { color: inherit; }
 
 /* === Header === */
 header {
-    background-color: rgba(5, 6, 15, 0.75);
+    background-color: rgba(20, 27, 46, 0.82);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--surface-border);
@@ -86,8 +87,8 @@ header {
 }
 
 .navigation a:hover {
-    color: #fff;
-    background-color: rgba(58, 108, 244, 0.15);
+    color: var(--accent);
+    background-color: rgba(198, 167, 94, 0.15);
 }
 
 section {
@@ -113,7 +114,7 @@ section {
     align-items: center;
     justify-content: flex-start;
     background:
-        radial-gradient(ellipse 700px 500px at 78% 45%, rgba(58, 108, 244, 0.22), transparent 70%),
+        radial-gradient(ellipse 700px 500px at 78% 45%, rgba(198, 167, 94, 0.14), transparent 70%),
         url(images/Mohamed\ ALi.png) no-repeat right center;
     background-size: auto, 600px auto;
     background-attachment: fixed, fixed;
@@ -123,15 +124,13 @@ section {
 .eyebrow {
     display: inline-block;
     color: var(--accent);
-    font-size: 0.9em;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 18px;
     padding: 6px 16px;
-    border: 1px solid var(--surface-border);
-    border-radius: 20px;
-    background: rgba(58, 108, 244, 0.08);
+   
 }
 
 .main h2 {
@@ -161,7 +160,7 @@ section {
 }
 
 .main-btn {
-    color: #fff;
+    color: var(--on-accent);
     background: linear-gradient(100deg, var(--accent), var(--accent-2));
     text-decoration: none;
     font-size: 1.05em;
@@ -171,13 +170,13 @@ section {
     letter-spacing: 0.5px;
     border-radius: 15px;
     margin-bottom: 40px;
-    box-shadow: 0 8px 30px rgba(58, 108, 244, 0.35);
+    box-shadow: 0 8px 30px rgba(198, 167, 94, 0.35);
     transition: 0.4s ease;
 }
 
 .main-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 36px rgba(58, 108, 244, 0.5);
+    box-shadow: 0 12px 36px rgba(198, 167, 94, 0.5);
 }
 
 .social-icons {
@@ -326,7 +325,7 @@ section {
     height: 13px;
     background-color: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(58, 108, 244, 0.18), 0 0 12px rgba(58, 108, 244, 0.7);
+    box-shadow: 0 0 0 5px rgba(198, 167, 94, 0.18), 0 0 12px rgba(198, 167, 94, 0.7);
 }
 
 .timeline-header {
@@ -405,7 +404,7 @@ section {
 .skill-group:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 12px 30px rgba(58, 108, 244, 0.15);
+    box-shadow: 0 12px 30px rgba(198, 167, 94, 0.15);
 }
 
 .skill-group h3 {
@@ -436,9 +435,9 @@ section {
 }
 
 .skill-tags span {
-    background-color: rgba(58, 108, 244, 0.1);
+    background-color: rgba(198, 167, 94, 0.1);
     border: 1px solid var(--surface-border);
-    color: #c9d2ff;
+    color: var(--text);
     font-size: 0.82em;
     font-weight: 600;
     padding: 6px 13px;
@@ -466,7 +465,7 @@ section {
 .card:hover {
     transform: translateY(-6px);
     border-color: var(--accent);
-    box-shadow: 0 16px 36px rgba(58, 108, 244, 0.18);
+    box-shadow: 0 16px 36px rgba(198, 167, 94, 0.18);
 }
 
 .card .icon {
@@ -510,7 +509,7 @@ section {
 .project-card:hover {
     transform: translateY(-6px);
     border-color: var(--accent);
-    box-shadow: 0 16px 40px rgba(58, 108, 244, 0.2);
+    box-shadow: 0 16px 40px rgba(198, 167, 94, 0.2);
 }
 
 .project-card:hover .project-image {
@@ -564,7 +563,7 @@ section {
 }
 
 .more-details:hover {
-    color: #fff;
+    color: var(--accent-2);
 }
 
 .project-tag {
@@ -572,7 +571,7 @@ section {
     top: 12px;
     left: 12px;
     background: linear-gradient(100deg, var(--accent), var(--accent-2));
-    color: #fff;
+    color: var(--on-accent);
     font-size: 0.68em;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -597,7 +596,7 @@ section {
     align-items: center;
     gap: 30px;
     padding: 22px;
-    box-shadow: 0 16px 40px rgba(58, 108, 244, 0.2);
+    box-shadow: 0 16px 40px rgba(198, 167, 94, 0.2);
     border-color: var(--accent);
 }
 
@@ -644,7 +643,7 @@ section {
 }
 
 .project-details strong {
-    color: #c9d2ff;
+    color: var(--accent-2);
 }
 
 .project-card,
@@ -691,12 +690,12 @@ section {
     bottom: 30px;
     right: 30px;
     background: linear-gradient(100deg, var(--accent), var(--accent-2));
-    color: white;
+    color: var(--on-accent);
     font-size: 1.4em;
     padding: 12px 16px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 8px 24px rgba(58, 108, 244, 0.4);
+    box-shadow: 0 8px 24px rgba(198, 167, 94, 0.4);
     transition: all 0.3s ease;
     opacity: 0;
     pointer-events: none;
@@ -719,7 +718,7 @@ section {
 
 /* === Footer === */
 .footer {
-    background-color: #030410;
+    background-color: #0F1524;
     border-top: 1px solid var(--surface-border);
     color: var(--text);
     padding: 2.2em;
@@ -828,7 +827,7 @@ section {
         height: 320px;
         margin-top: calc(var(--header-h) + 20px); /* clears the fixed header */
         background:
-            radial-gradient(ellipse 320px 260px at 50% 40%, rgba(58, 108, 244, 0.28), transparent 70%),
+            radial-gradient(ellipse 320px 260px at 50% 40%, rgba(198, 167, 94, 0.18), transparent 70%),
             url(images/Mohamed\ ALi.png) no-repeat center top / contain;
         -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
         mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
